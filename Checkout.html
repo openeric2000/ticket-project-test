@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>結帳與支付 | Ticket Project</title>
+		<link rel="stylesheet" href="CSS/Checkout.css" />
+	</head>
+	<body>
+		<header class="checkout-header">
+			<h1>結帳與支付</h1>
+		</header>
+
+		<main class="checkout-container">
+			<!-- 訂單摘要 -->
+			<section class="order-summary">
+				<h2>訂單摘要</h2>
+				<div class="order-item">
+					<p><strong>活動名稱：</strong>2025 LIVE CONCERT</p>
+					<p><strong>場次日期：</strong>2025/12/10 (三) 19:00</p>
+					<p><strong>座位資訊：</strong>A區 12排 10號</p>
+					<p><strong>票種與數量：</strong>一般票 × 2</p>
+					<p><strong>小計：</strong>NT$ 3,600</p>
+					<p><strong>服務費：</strong>NT$ 100</p>
+					<hr />
+					<p class="total"><strong>總金額：</strong>NT$ 3,700</p>
+				</div>
+				<button class="back-btn">← 返回選座</button>
+			</section>
+
+			<!-- 付款方式 -->
+			<section class="payment-method">
+				<h2>選擇付款方式</h2>
+				<div class="payment-options">
+					<label
+						><input type="radio" name="payment" checked />
+						信用卡</label
+					>
+					<label
+						><input type="radio" name="payment" /> ATM
+						虛擬帳號</label
+					>
+					<label
+						><input type="radio" name="payment" /> 電子支付</label
+					>
+				</div>
+
+				<!-- 信用卡區 -->
+				<div class="credit-card-form">
+					<label
+						>卡號：
+						<input
+							type="text"
+							placeholder="例：4111 1111 1111 1111"
+							maxlength="19"
+						/>
+					</label>
+					<label
+						>有效期限（月/年）：
+						<input type="text" placeholder="MM/YY" maxlength="5" />
+					</label>
+					<label
+						>安全碼：
+						<input type="text" placeholder="CVV" maxlength="3" />
+					</label>
+					<label
+						>持卡人姓名：
+						<input type="text" placeholder="Name on card" />
+					</label>
+				</div>
+			</section>
+
+			<!-- 確認付款 -->
+			<section class="confirm-section">
+				<button class="confirm-btn">確認付款</button>
+				<p class="warning-text">
+					※ 點擊「確認付款」即表示同意服務條款與退票政策。
+				</p>
+			</section>
+		</main>
+
+		<footer class="checkout-footer">
+			<p>© 2025 Ticket Project. A ll rights reserved.</p>
+		</footer>
+	</body>
+</html>

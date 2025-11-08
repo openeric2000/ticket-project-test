@@ -1,0 +1,122 @@
+/* ============================================
+   輪播動畫和樣式（Carousel Styles）
+   ============================================ */
+
+/* 輪播容器 */
+.carousel-container {
+	position: relative;
+	overflow: hidden;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor: grab;
+}
+
+.carousel-container:active {
+	cursor: grabbing;
+}
+
+/* 輪播內容容器 */
+.carousel-inner {
+	display: flex;
+	transition: transform 0.6s ease-in-out;
+}
+
+.carousel-inner * {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+/* 輪播項目 */
+.carousel-item {
+	min-width: 100%;
+	flex-shrink: 0;
+}
+
+/* Banner 幻燈片樣式 */
+.banner-slide {
+	min-height: clamp(280px, 40vw, 520px);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+/* Banner 漸層遮罩 */
+.banner-slide::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0.9) 0%,
+		rgba(255, 255, 255, 0.6) 45%,
+		rgba(255, 255, 255, 0) 70%
+	);
+	pointer-events: none;
+}
+
+.banner-slide .container {
+	position: relative;
+	z-index: 1;
+}
+
+/* 輪播指示器 */
+.carousel-indicators button {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.5);
+	transition: background-color 0.3s;
+}
+
+.carousel-indicators button.active {
+	background-color: #fb8d98;
+}
+
+/* 輪播控制按鈕 */
+.carousel-control {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s;
+	font-size: 60px;
+	font-weight: 900;
+	color: white;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+	line-height: 1;
+	padding: 0;
+	width: 50px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.carousel-control:hover {
+	transform: translateY(-50%) scale(1.1);
+	text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control-prev {
+	left: 20px;
+}
+
+.carousel-control-next {
+	right: 20px;
+}
+
+.carousel-control-prev::before {
+	content: '‹';
+}
+
+.carousel-control-next::before {
+	content: '›';
+}

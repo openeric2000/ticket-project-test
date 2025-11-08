@@ -1,0 +1,121 @@
+body {
+	font-family: "Noto Sans TC", sans-serif;
+	background-color: #fff;
+	margin: 0;
+	color: #333;
+}
+
+.checkout-header {
+	background-color: #fb8d98;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+}
+
+.checkout-container {
+	max-width: 800px;
+	margin: 30px auto;
+	padding: 0 20px;
+}
+
+section {
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 25px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+	border-left: 5px solid #fb8d98;
+	padding-left: 10px;
+	color: #fb8d98;
+	margin-bottom: 15px;
+}
+
+.order-item p {
+	margin: 8px 0;
+}
+
+.order-item .total {
+	font-size: 1.2rem;
+	color: #e64b5f;
+	font-weight: bold;
+}
+
+.back-btn {
+	margin-top: 15px;
+	padding: 10px 20px;
+	background-color: transparent;
+	border: 1px solid #fb8d98;
+	color: #fb8d98;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.back-btn:hover {
+	background-color: #fb8d98;
+	color: #fff;
+}
+
+.payment-options label {
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.credit-card-form label {
+	display: block;
+	margin: 10px 0;
+}
+
+.credit-card-form input {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	transition: 0.2s;
+}
+
+.credit-card-form input:focus {
+	border-color: #fb8d98;
+	outline: none;
+	box-shadow: 0 0 3px #fb8d98;
+}
+
+.confirm-section {
+	text-align: center;
+}
+
+.confirm-btn {
+	background-color: #fb8d98;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 12px 30px;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.confirm-btn:hover {
+	background-color: #e96c7a;
+	transform: scale(1.05);
+}
+
+.warning-text {
+	font-size: 0.9rem;
+	color: #666;
+	margin-top: 10px;
+}
+
+.checkout-footer {
+	text-align: center;
+	padding: 15px 0;
+	color: #999;
+	font-size: 0.9rem;
+}

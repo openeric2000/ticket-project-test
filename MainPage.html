@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, viewport-fit=cover"
+		/>
+		<meta
+			name="description"
+			content="演唱會、活動與展演票券平台 – 乾淨白底、灰紅重點色的票務網站首頁樣板"
+		/>
+		<title>首頁</title>
+
+		<!-- Bootstrap 5 CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<!-- Font Awesome Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2vC7f1wV7QG1R5Yk5Yl5N9+8nbTov4V5J5x8G6VZP5xGXaYog=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="./CSS/MainPage.css" />
+	</head>
+	<body>
+		<!-- Header / Navbar -->
+		<header class="sticky-top shadow-sm bg-white">
+			<nav class="navbar navbar-expand-lg container py-2">
+				<a
+					class="navbar-brand fw-bold d-flex align-items-center"
+					href="#"
+					aria-label="Tixcraft Ticketing 首頁"
+				>
+					<i class="fa-solid fa-ticket-simple me-2 text-brand"></i>
+					<span>拓海售票</span>
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#mainNavbar"
+					aria-controls="mainNavbar"
+					aria-expanded="false"
+					aria-label="切換導覽"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div
+					class="collapse navbar-collapse justify-content-end"
+					id="mainNavbar"
+				>
+					<ul class="navbar-nav align-items-lg-center gap-lg-2">
+						<li class="nav-item">
+							<a class="nav-link" href="#notice"
+								><i class="fa-regular fa-bell me-1"></i
+								>最新公告</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#events"
+								><i class="fa-regular fa-calendar me-1"></i
+								>活動門票</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" title="訂單查詢"
+								><i class="fa-regular fa-file-lines me-1"></i
+								>訂單查詢</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" title="客服中心"
+								><i
+									class="fa-regular fa-circle-question me-1"
+								></i
+								>客服中心</a
+							>
+						</li>
+						<li class="nav-item dropdown d-none d-lg-block">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="langMenu"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								<i class="fa-solid fa-globe me-1"></i>繁體中文
+							</a>
+							<ul
+								class="dropdown-menu"
+								aria-labelledby="langMenu"
+							>
+								<li>
+									<a class="dropdown-item" href="#"
+										>繁體中文</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#"
+										>English</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">日本語</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<div class="d-flex mt-3 mt-lg-0 ms-lg-3">
+						<button
+							class="btn btn-brand"
+							data-bs-toggle="modal"
+							data-bs-target="#loginModal"
+						>
+							<i class="fa-regular fa-user me-1"></i>登入/註冊
+						</button>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Hero carousel -->
+		<section class="bg-light-subtle">
+			<div
+				id="heroCarousel"
+				class="carousel slide"
+				data-bs-ride="carousel"
+				data-bs-touch="true"
+				data-bs-keyboard="true"
+				data-bs-interval="2000"
+				data-bs-wrap="true"
+				data-bs-pause="false"
+				tabindex="0"
+			>
+				<div class="carousel-indicators">
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="0"
+						class="active"
+						aria-current="true"
+						aria-label="Slide 1"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="1"
+						aria-label="Slide 2"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="2"
+						aria-label="Slide 3"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="3"
+						aria-label="Slide 4"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="4"
+						aria-label="Slide 5"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="5"
+						aria-label="Slide 6"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="6"
+						aria-label="Slide 7"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="7"
+						aria-label="Slide 8"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="8"
+						aria-label="Slide 9"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="9"
+						aria-label="Slide 10"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="10"
+						aria-label="Slide 11"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="11"
+						aria-label="Slide 12"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="12"
+						aria-label="Slide 13"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="13"
+						aria-label="Slide 14"
+					></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div
+							class="banner-slide banner-1 d-flex align-items-center"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											2025 超級演唱會
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											感受現場震撼 · 全球限量售票中
+										</p>
+										<a
+											href="#events"
+											class="btn btn-brand btn-lg"
+											>立即購票</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide banner-2 d-flex align-items-center"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											年度音樂祭
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											多組卡司輪番上陣，精彩不中斷
+										</p>
+										<a
+											href="#events"
+											class="btn btn-outline-brand btn-lg"
+											>探索活動</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide banner-3 d-flex align-items-center"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											熱門舞台劇 · 熱賣中
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											經典重現 · 不容錯過的劇場體驗
+										</p>
+										<a
+											href="#events"
+											class="btn btn-brand btn-lg"
+											>看更多</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Extra demo slides (10 more) -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											城市藝文季
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											跨界展演，沉浸式互動體驗
+										</p>
+										<a
+											href="#events"
+											class="btn btn-brand btn-lg"
+											>立即購票</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											跨年演唱會
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											倒數歡慶，與你一起迎向新年
+										</p>
+										<a
+											href="#events"
+											class="btn btn-outline-brand btn-lg"
+											>探索活動</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											流行音樂風暴
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											人氣歌手齊聚，燃炸整夜
+										</p>
+										<a
+											href="#events"
+											class="btn btn-brand btn-lg"
+											>立即購票</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											爵士之夜
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											經典旋律，細膩品味
+										</p>
+										<a
+											href="#events"
+											class="btn btn-outline-brand btn-lg"
+											>探索活動</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											親子歡樂日
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											一起玩樂，創造美好回憶
+										</p>
+										<a
+											href="#events"
+											class="btn btn-brand btn-lg"
+											>立即購票</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1472653431158-6364773b2a56?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											搖滾之夜
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											高能熱血，現場開唱
+										</p>
+										<a
+											href="#events"
+											class="btn btn-outline-brand btn-lg"
+											>探索活動</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											劇場新視界
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											沉浸劇場，突破想像邊界
+										</p>
+										<a
+											href="#events"
+											class="btn btn-brand btn-lg"
+											>立即購票</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											電子音浪節
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											全場嗨翻，節奏不停歇
+										</p>
+										<a
+											href="#events"
+											class="btn btn-outline-brand btn-lg"
+											>探索活動</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1529473814998-077b4fec6770?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											經典重現
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											重溫不朽名作的感動
+										</p>
+										<a
+											href="#events"
+											class="btn btn-brand btn-lg"
+											>立即購票</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											城市巡演
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											巡迴多城，熱力開唱
+										</p>
+										<a
+											href="#events"
+											class="btn btn-outline-brand btn-lg"
+											>探索活動</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div
+							class="banner-slide d-flex align-items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-lg-7">
+										<h2 class="display-6 fw-bold mb-2">
+											國際交流季
+										</h2>
+										<p
+											class="lead text-body-secondary mb-4"
+										>
+											文化交會，創意無國界
+										</p>
+										<a
+											href="#events"
+											class="btn btn-brand btn-lg"
+											>立即購票</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					class="carousel-control-prev"
+					type="button"
+					data-bs-target="#heroCarousel"
+					data-bs-slide="prev"
+				>
+					<span
+						class="carousel-control-prev-icon"
+						aria-hidden="true"
+					></span>
+					<span class="visually-hidden">上一張</span>
+				</button>
+				<button
+					class="carousel-control-next"
+					type="button"
+					data-bs-target="#heroCarousel"
+					data-bs-slide="next"
+				>
+					<span
+						class="carousel-control-next-icon"
+						aria-hidden="true"
+					></span>
+					<span class="visually-hidden">下一張</span>
+				</button>
+			</div>
+		</section>
+
+		<!-- Event tickets -->
+		<main class="py-5" id="events">
+			<div class="container">
+				<div
+					class="d-flex align-items-end justify-content-between mb-3"
+				>
+					<div>
+						<h3 class="section-title mb-0">活動門票</h3>
+						<p class="text-body-secondary small mb-0">
+							精選演唱會、展演與親子活動
+						</p>
+					</div>
+					<a href="#" class="text-brand small"
+						>查看全部<i class="fa-solid fa-arrow-right ms-1"></i
+					></a>
+				</div>
+
+				<div class="row g-3 g-md-4">
+					<!-- Card 1 -->
+					<div class="col-12 col-sm-6 col-lg-4">
+						<div class="card ticket-card h-100">
+							<div
+								class="ratio ratio-16x9 bg-cover"
+								style="
+									background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1600&auto=format&fit=crop');
+								"
+							></div>
+							<div class="card-body">
+								<h5
+									class="card-title text-truncate"
+									title="星光之夜 2025 世界巡迴演唱會"
+								>
+									星光之夜 2025 世界巡迴演唱會
+								</h5>
+								<ul
+									class="list-unstyled small text-body-secondary mb-3"
+								>
+									<li>
+										<i
+											class="fa-solid fa-location-dot me-1"
+										></i
+										>台北小巨蛋
+									</li>
+									<li>
+										<i
+											class="fa-regular fa-calendar me-1"
+										></i
+										>2025/12/05（五）19:30
+									</li>
+								</ul>
+								<a href="#" class="btn btn-brand w-100"
+									>立即購票</a
+								>
+							</div>
+						</div>
+					</div>
+					<!-- Card 2 -->
+					<div class="col-12 col-sm-6 col-lg-4">
+						<div class="card ticket-card h-100">
+							<div
+								class="ratio ratio-16x9 bg-cover"
+								style="
+									background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop');
+								"
+							></div>
+							<div class="card-body">
+								<h5
+									class="card-title text-truncate"
+									title="夏日音樂祭 2025"
+								>
+									夏日音樂祭 2025
+								</h5>
+								<ul
+									class="list-unstyled small text-body-secondary mb-3"
+								>
+									<li>
+										<i
+											class="fa-solid fa-location-dot me-1"
+										></i
+										>高雄世運主場館
+									</li>
+									<li>
+										<i
+											class="fa-regular fa-calendar me-1"
+										></i
+										>2025/08/20（三）16:00
+									</li>
+								</ul>
+								<a href="#" class="btn btn-brand w-100"
+									>立即購票</a
+								>
+							</div>
+						</div>
+					</div>
+					<!-- Card 3 -->
+					<div class="col-12 col-sm-6 col-lg-4">
+						<div class="card ticket-card h-100">
+							<div
+								class="ratio ratio-16x9 bg-cover"
+								style="
+									background-image: url('https://images.unsplash.com/photo-1524230659092-07f99a75d4d5?q=80&w=1600&auto=format&fit=crop');
+								"
+							></div>
+							<div class="card-body">
+								<h5
+									class="card-title text-truncate"
+									title="沉浸式劇場：城市之光"
+								>
+									沉浸式劇場：城市之光
+								</h5>
+								<ul
+									class="list-unstyled small text-body-secondary mb-3"
+								>
+									<li>
+										<i
+											class="fa-solid fa-location-dot me-1"
+										></i
+										>臺中國家歌劇院 中劇院
+									</li>
+									<li>
+										<i
+											class="fa-regular fa-calendar me-1"
+										></i
+										>2025/11/10（六）14:30
+									</li>
+								</ul>
+								<a href="#" class="btn btn-brand w-100"
+									>立即購票</a
+								>
+							</div>
+						</div>
+					</div>
+					<!-- Card 4 -->
+					<div class="col-12 col-sm-6 col-lg-4">
+						<div class="card ticket-card h-100">
+							<div
+								class="ratio ratio-16x9 bg-cover"
+								style="
+									background-image: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1600&auto=format&fit=crop');
+								"
+							></div>
+							<div class="card-body">
+								<h5
+									class="card-title text-truncate"
+									title="親子馬戲嘉年華"
+								>
+									親子馬戲嘉年華
+								</h5>
+								<ul
+									class="list-unstyled small text-body-secondary mb-3"
+								>
+									<li>
+										<i
+											class="fa-solid fa-location-dot me-1"
+										></i
+										>台北流行音樂中心
+									</li>
+									<li>
+										<i
+											class="fa-regular fa-calendar me-1"
+										></i
+										>2025/07/13（日）10:00
+									</li>
+								</ul>
+								<a href="#" class="btn btn-brand w-100"
+									>立即購票</a
+								>
+							</div>
+						</div>
+					</div>
+					<!-- Card 5 -->
+					<div class="col-12 col-sm-6 col-lg-4">
+						<div class="card ticket-card h-100">
+							<div
+								class="ratio ratio-16x9 bg-cover"
+								style="
+									background-image: url('https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=1600&auto=format&fit=crop');
+								"
+							></div>
+							<div class="card-body">
+								<h5
+									class="card-title text-truncate"
+									title="動漫交響樂特別場"
+								>
+									動漫交響樂特別場
+								</h5>
+								<ul
+									class="list-unstyled small text-body-secondary mb-3"
+								>
+									<li>
+										<i
+											class="fa-solid fa-location-dot me-1"
+										></i
+										>國家音樂廳
+									</li>
+									<li>
+										<i
+											class="fa-regular fa-calendar me-1"
+										></i
+										>2025/09/28（日）19:30
+									</li>
+								</ul>
+								<a href="#" class="btn btn-brand w-100"
+									>立即購票</a
+								>
+							</div>
+						</div>
+					</div>
+					<!-- Card 6 -->
+					<div class="col-12 col-sm-6 col-lg-4">
+						<div class="card ticket-card h-100">
+							<div
+								class="ratio ratio-16x9 bg-cover"
+								style="
+									background-image: url('https://images.unsplash.com/photo-1518544801976-3e159e50e5bb?q=80&w=1600&auto=format&fit=crop');
+								"
+							></div>
+							<div class="card-body">
+								<h5
+									class="card-title text-truncate"
+									title="脫口秀之夜"
+								>
+									脫口秀之夜
+								</h5>
+								<ul
+									class="list-unstyled small text-body-secondary mb-3"
+								>
+									<li>
+										<i
+											class="fa-solid fa-location-dot me-1"
+										></i
+										>Legacy Taipei
+									</li>
+									<li>
+										<i
+											class="fa-regular fa-calendar me-1"
+										></i
+										>2025/06/22（六）20:00
+									</li>
+								</ul>
+								<a href="#" class="btn btn-brand w-100"
+									>立即購票</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Notice / Announcement -->
+		<section class="py-5 bg-body-tertiary" id="notice">
+			<div class="container">
+				<div
+					class="d-flex align-items-end justify-content-between mb-3"
+				>
+					<div>
+						<h3 class="section-title mb-0">最新公告</h3>
+						<p class="text-body-secondary small mb-0">
+							購票須知、系統維護與活動公告
+						</p>
+					</div>
+					<a href="#" class="text-brand small"
+						>更多公告<i class="fa-solid fa-arrow-right ms-1"></i
+					></a>
+				</div>
+
+				<div
+					class="list-group list-group-flush bg-white rounded-3 border"
+				>
+					<a
+						href="#"
+						class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+					>
+						<span
+							><span class="badge bg-brand-subtle text-brand me-2"
+								>公告</span
+							>
+							11/15 系統維護通知（02:00–05:00 暫停服務）</span
+						>
+						<small class="text-body-secondary">2025-11-01</small>
+					</a>
+					<a
+						href="#"
+						class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+					>
+						<span
+							><span class="badge bg-brand-subtle text-brand me-2"
+								>注意</span
+							>
+							搖滾區採實名制，入場請備妥證件</span
+						>
+						<small class="text-body-secondary">2025-10-20</small>
+					</a>
+					<a
+						href="#"
+						class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+					>
+						<span
+							><span class="badge bg-brand-subtle text-brand me-2"
+								>活動</span
+							>
+							年度音樂祭搶票攻略與購票流程指引</span
+						>
+						<small class="text-body-secondary">2025-10-05</small>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="pt-5 pb-4 bg-white border-top">
+			<div class="container">
+				<div class="row g-4">
+					<div class="col-12 col-lg-4">
+						<div class="d-flex align-items-center mb-2">
+							<i
+								class="fa-solid fa-ticket-simple me-2 text-brand"
+							></i>
+							<span class="fw-bold">Tixcraft Ticketing</span>
+						</div>
+						<p class="text-body-secondary small mb-2">
+							提供演唱會、藝文與展演活動之線上購票服務，重視使用體驗與資訊安全。
+						</p>
+						<div class="d-flex gap-2">
+							<a
+								class="btn btn-sm btn-outline-secondary rounded-circle"
+								href="#"
+								aria-label="Facebook"
+								><i class="fa-brands fa-facebook-f"></i
+							></a>
+							<a
+								class="btn btn-sm btn-outline-secondary rounded-circle"
+								href="#"
+								aria-label="Instagram"
+								><i class="fa-brands fa-instagram"></i
+							></a>
+							<a
+								class="btn btn-sm btn-outline-secondary rounded-circle"
+								href="#"
+								aria-label="X/Twitter"
+								><i class="fa-brands fa-x-twitter"></i
+							></a>
+							<a
+								class="btn btn-sm btn-outline-secondary rounded-circle"
+								href="#"
+								aria-label="YouTube"
+								><i class="fa-brands fa-youtube"></i
+							></a>
+						</div>
+					</div>
+					<div class="col-6 col-lg-2">
+						<h6 class="text-uppercase small fw-bold mb-2">客服</h6>
+						<ul class="list-unstyled small">
+							<li>
+								<a href="#" class="link-secondary">常見問題</a>
+							</li>
+							<li>
+								<a href="#" class="link-secondary">聯絡我們</a>
+							</li>
+							<li>
+								<a href="#" class="link-secondary">服務條款</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-6 col-lg-2">
+						<h6 class="text-uppercase small fw-bold mb-2">政策</h6>
+						<ul class="list-unstyled small">
+							<li>
+								<a href="#" class="link-secondary"
+									>隱私權政策</a
+								>
+							</li>
+							<li>
+								<a href="#" class="link-secondary"
+									>退換票辦法</a
+								>
+							</li>
+							<li>
+								<a href="#" class="link-secondary">購票須知</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-12 col-lg-4">
+						<h6 class="text-uppercase small fw-bold mb-2">
+							訂閱最新活動
+						</h6>
+						<form
+							class="row g-2"
+							onsubmit="event.preventDefault();"
+						>
+							<div class="col-12 col-sm-8">
+								<label
+									for="subscribeEmail"
+									class="visually-hidden"
+									>Email</label
+								>
+								<input
+									type="email"
+									id="subscribeEmail"
+									class="form-control"
+									placeholder="輸入 Email"
+									required
+								/>
+							</div>
+							<div class="col-12 col-sm-4 d-grid">
+								<button class="btn btn-brand" type="submit">
+									訂閱
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<hr class="my-4" />
+				<div
+					class="d-flex flex-column flex-sm-row justify-content-between align-items-center small text-body-secondary"
+				>
+					<span
+						>© <span id="year"></span> Tixcraft Ticketing. All
+						rights reserved.</span
+					>
+					<div class="mt-2 mt-sm-0">
+						<a href="#" class="link-secondary me-3">隱私權政策</a>
+						<a href="#" class="link-secondary">使用者條款</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Login modal -->
+		<div
+			class="modal fade"
+			id="loginModal"
+			tabindex="-1"
+			aria-labelledby="loginModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="loginModalLabel">
+							會員登入
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<form onsubmit="event.preventDefault();">
+							<div class="mb-3">
+								<label for="loginEmail" class="form-label"
+									>Email</label
+								>
+								<input
+									type="email"
+									class="form-control"
+									id="loginEmail"
+									placeholder="name@example.com"
+									required
+								/>
+							</div>
+							<div class="mb-2">
+								<label for="loginPassword" class="form-label"
+									>密碼</label
+								>
+								<input
+									type="password"
+									class="form-control"
+									id="loginPassword"
+									placeholder="請輸入密碼"
+									required
+								/>
+							</div>
+							<div
+								class="d-flex justify-content-between align-items-center mb-3"
+							>
+								<div class="form-check">
+									<input
+										class="form-check-input"
+										type="checkbox"
+										value=""
+										id="rememberMe"
+									/>
+									<label
+										class="form-check-label"
+										for="rememberMe"
+										>記住我</label
+									>
+								</div>
+								<a href="#" class="small">忘記密碼？</a>
+							</div>
+							<button type="submit" class="btn btn-brand w-100">
+								登入
+							</button>
+						</form>
+						<div class="text-center mt-3 small">
+							還不是會員？<a href="#">立即註冊</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap JS -->
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Carousel drag script -->
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const el = document.getElementById("heroCarousel");
+				const carousel = new bootstrap.Carousel(el, {
+					interval: 8000,
+					ride: "carousel",
+					pause: false,
+					wrap: true,
+				});
+
+				const inner = el.querySelector(".carousel-inner");
+				let isDragging = false;
+				let startX = 0;
+				let currentX = 0;
+				let translateX = 0;
+				let animationFrame;
+
+				const getX = (e) =>
+					e.type.includes("mouse") ? e.clientX : e.touches[0].clientX;
+
+				const updateTransform = () => {
+					inner.style.transform = `translateX(${translateX}px)`;
+					if (isDragging) requestAnimationFrame(updateTransform);
+				};
+
+				const startDrag = (e) => {
+					isDragging = true;
+					startX = getX(e);
+					inner.style.transition = "none";
+					el.classList.add("dragging");
+
+					// 暫停輪播自動播放
+					carousel.pause();
+
+					cancelAnimationFrame(animationFrame);
+					animationFrame = requestAnimationFrame(updateTransform);
+				};
+
+				const moveDrag = (e) => {
+					if (!isDragging) return;
+					currentX = getX(e);
+					translateX = currentX - startX;
+				};
+
+				const endDrag = () => {
+					if (!isDragging) return;
+					isDragging = false;
+					el.classList.remove("dragging");
+					inner.style.transition = "transform 0.3s ease";
+					cancelAnimationFrame(animationFrame);
+
+					if (Math.abs(translateX) > inner.clientWidth * 0.2) {
+						if (translateX < 0) carousel.next();
+						else carousel.prev();
+					}
+
+					inner.style.transform = "";
+					translateX = 0;
+
+					// 拖曳結束恢復自動播放
+					carousel.cycle();
+				};
+
+				inner.addEventListener("mousedown", startDrag);
+				inner.addEventListener("mousemove", moveDrag);
+				inner.addEventListener("mouseup", endDrag);
+				inner.addEventListener("mouseleave", endDrag);
+				inner.addEventListener("touchstart", startDrag);
+				inner.addEventListener("touchmove", moveDrag);
+				inner.addEventListener("touchend", endDrag);
+			});
+		</script>
+	</body>
+</html>

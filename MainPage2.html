@@ -1,0 +1,1112 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, viewport-fit=cover"
+		/>
+		<meta
+			name="description"
+			content="演唱會、活動與展演票券平台 – 乾淨白底、灰紅重點色的票務網站首頁樣板"
+		/>
+		<title>首頁</title>
+
+		<!-- ✅ Tailwind CSS（v4 編譯輸出） -->
+		<link rel="stylesheet" href="./dist/output.css" />
+
+		<!-- ✅ Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2vC7f1wV7QG1R5Yk5Yl5N9+8nbTov4V5J5x8G6VZP5xGXaYog=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- ✅ 自訂樣式 -->
+		<link rel="stylesheet" href="./CSS/MainPage2.css" />
+
+		<!-- ✅ Tailwind 自訂 layer -->
+		<style type="text/tailwindcss">
+			@layer components {
+				.btn {
+					@apply inline-block px-4 py-2 rounded-lg font-medium transition duration-200 text-center;
+				}
+				.btn-primary {
+					@apply btn bg-primary text-white hover:bg-primary-hover;
+				}
+				.btn-outline-primary {
+					@apply btn bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white;
+				}
+				.btn-lg {
+					@apply px-6 py-3 text-lg;
+				}
+			}
+
+			@layer utilities {
+				.scroll-smooth {
+					scroll-behavior: smooth;
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-50 scroll-smooth">
+		<!-- Header / Navbar -->
+		<header class="sticky top-0 z-50 bg-primary shadow-sm">
+			<nav class="container mx-auto py-3">
+				<div class="flex items-center justify-between">
+					<!-- Logo -->
+					<a
+						href="#"
+						class="flex items-center font-bold text-white text-lg"
+						aria-label="TicketII 首頁"
+					>
+						<i class="fa-solid fa-ticket-simple mr-2"></i>
+						<span>TicketII</span>
+					</a>
+
+					<!-- Mobile Menu Button -->
+					<button
+						id="mobileMenuBtn"
+						class="lg:hidden text-white focus:outline-none"
+						aria-label="切換導覽"
+					>
+						<i class="fa-solid fa-bars text-xl"></i>
+					</button>
+
+					<!-- Desktop Navigation -->
+					<div class="hidden lg:flex items-center space-x-6">
+						<a href="#notice" class="nav-link">
+							<i class="fa-regular fa-bell mr-1"></i>最新公告
+						</a>
+						<a href="#events" class="nav-link">
+							<i class="fa-regular fa-calendar mr-1"></i>活動門票
+						</a>
+						<a href="#" class="nav-link">
+							<i class="fa-regular fa-file-lines mr-1"></i
+							>訂單查詢
+						</a>
+						<a href="#" class="nav-link">
+							<i class="fa-regular fa-circle-question mr-1"></i
+							>客服中心
+						</a>
+						<div class="relative group">
+							<button class="nav-link flex items-center">
+								<i class="fa-solid fa-globe mr-1"></i>繁體中文
+								<i
+									class="fa-solid fa-chevron-down ml-1 text-xs"
+								></i>
+							</button>
+							<div
+								class="hidden group-hover:block absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg py-2 min-w-[120px]"
+							>
+								<a
+									href="#"
+									class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+									>繁體中文</a
+								>
+								<a
+									href="#"
+									class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+									>English</a
+								>
+								<a
+									href="#"
+									class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+									>日本語</a
+								>
+							</div>
+						</div>
+						<button
+							id="loginBtn"
+							class="bg-white text-primary px-4 py-2 rounded-lg hover:bg-gray-100 transition font-medium"
+						>
+							<i class="fa-regular fa-user mr-1"></i>登入/註冊
+						</button>
+					</div>
+				</div>
+
+				<!-- Mobile Navigation -->
+				<div id="mobileMenu" class="hidden lg:hidden mt-4 space-y-3">
+					<a href="#notice" class="block nav-link">
+						<i class="fa-regular fa-bell mr-1"></i>最新公告
+					</a>
+					<a href="#events" class="block nav-link">
+						<i class="fa-regular fa-calendar mr-1"></i>活動門票
+					</a>
+					<a href="#" class="block nav-link">
+						<i class="fa-regular fa-file-lines mr-1"></i>訂單查詢
+					</a>
+					<a href="#" class="block nav-link">
+						<i class="fa-regular fa-circle-question mr-1"></i
+						>客服中心
+					</a>
+					<button
+						id="loginBtnMobile"
+						class="w-full bg-white text-primary px-4 py-2 rounded-lg hover:bg-gray-100 transition font-medium"
+					>
+						<i class="fa-regular fa-user mr-1"></i>登入/註冊
+					</button>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Hero carousel -->
+		<section class="bg-gray-100">
+			<div id="heroCarousel" class="carousel-container relative">
+				<div id="carouselInner" class="carousel-inner">
+					<!-- Slide 1 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										2025 超級演唱會
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										感受現場震撼 · 全球限量售票中
+									</p>
+									<a href="#events" class="btn-primary"
+										>立即購票</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 2 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										年度音樂祭
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										多組卡司輪番上陣，精彩不中斷
+									</p>
+									<a
+										href="#events"
+										class="btn-outline-primary btn-lg"
+										>探索活動</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 3 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1518544801976-3e159e50e5bb?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										熱門舞台劇 · 熱賣中
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										經典重現 · 不容錯過的劇場體驗
+									</p>
+									<a href="#events" class="btn-primary btn-lg"
+										>看更多</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 4 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										城市藝文季
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										跨界展演，沉浸式互動體驗
+									</p>
+									<a href="#events" class="btn-primary"
+										>立即購票</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 5 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										跨年演唱會
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										倒數歡慶，與你一起迎向新年
+									</p>
+									<a
+										href="#events"
+										class="btn-outline-primary btn-lg"
+										>探索活動</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 6 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										流行音樂風暴
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										人氣歌手齊聚，燃炸整夜
+									</p>
+									<a href="#events" class="btn-primary"
+										>立即購票</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 7 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										爵士之夜
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										經典旋律，細膩品味
+									</p>
+									<a
+										href="#events"
+										class="btn-outline-primary btn-lg"
+										>探索活動</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 8 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										親子歡樂日
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										一起玩樂，創造美好回憶
+									</p>
+									<a href="#events" class="btn-primary"
+										>立即購票</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 9 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1472653431158-6364773b2a56?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										搖滾之夜
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										高能熱血，現場開唱
+									</p>
+									<a
+										href="#events"
+										class="btn-outline-primary btn-lg"
+										>探索活動</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 10 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										劇場新視界
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										沉浸劇場，突破想像邊界
+									</p>
+									<a href="#events" class="btn-primary"
+										>立即購票</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 11 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										電子音浪節
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										全場嗨翻，節奏不停歇
+									</p>
+									<a
+										href="#events"
+										class="btn-outline-primary btn-lg"
+										>探索活動</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 12 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1529473814998-077b4fec6770?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										經典重現
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										重溫不朽名作的感動
+									</p>
+									<a href="#events" class="btn-primary"
+										>立即購票</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 13 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										城市巡演
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										巡迴多城，熱力開唱
+									</p>
+									<a
+										href="#events"
+										class="btn-outline-primary btn-lg"
+										>探索活動</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 14 -->
+					<div class="carousel-item">
+						<div
+							class="banner-slide flex items-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2000&auto=format&fit=crop');
+							"
+						>
+							<div class="container mx-auto px-4">
+								<div class="max-w-2xl">
+									<h2
+										class="text-4xl lg:text-5xl font-bold mb-3"
+									>
+										國際交流季
+									</h2>
+									<p class="text-xl text-gray-600 mb-6">
+										文化交會，創意無國界
+									</p>
+									<a href="#events" class="btn-primary"
+										>立即購票</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Carousel Controls -->
+				<button
+					id="prevBtn"
+					class="carousel-control carousel-control-prev"
+					aria-label="上一張"
+				></button>
+				<button
+					id="nextBtn"
+					class="carousel-control carousel-control-next"
+					aria-label="下一張"
+				></button>
+
+				<!-- Carousel Indicators -->
+				<div
+					class="carousel-indicators absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10"
+				>
+					<button
+						class="active"
+						data-slide="0"
+						aria-label="Slide 1"
+					></button>
+					<button data-slide="1" aria-label="Slide 2"></button>
+					<button data-slide="2" aria-label="Slide 3"></button>
+					<button data-slide="3" aria-label="Slide 4"></button>
+					<button data-slide="4" aria-label="Slide 5"></button>
+					<button data-slide="5" aria-label="Slide 6"></button>
+					<button data-slide="6" aria-label="Slide 7"></button>
+					<button data-slide="7" aria-label="Slide 8"></button>
+					<button data-slide="8" aria-label="Slide 9"></button>
+					<button data-slide="9" aria-label="Slide 10"></button>
+					<button data-slide="10" aria-label="Slide 11"></button>
+					<button data-slide="11" aria-label="Slide 12"></button>
+					<button data-slide="12" aria-label="Slide 13"></button>
+					<button data-slide="13" aria-label="Slide 14"></button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Event tickets -->
+		<main class="py-12" id="events">
+			<div class="container mx-auto">
+				<div class="flex items-end justify-between mb-6">
+					<div>
+						<h3 class="text-2xl font-bold mb-1">活動門票</h3>
+						<p class="text-gray-600 text-sm">
+							精選演唱會、展演與親子活動
+						</p>
+					</div>
+					<a href="#" class="link-primary text-sm">
+						查看全部<i class="fa-solid fa-arrow-right ml-1"></i>
+					</a>
+				</div>
+
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+				>
+					<!-- Card 1 -->
+					<div
+						class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden h-full"
+					>
+						<div
+							class="aspect-video bg-cover bg-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1600&auto=format&fit=crop');
+							"
+						></div>
+						<div class="p-4">
+							<h5
+								class="font-semibold text-lg mb-2 truncate"
+								title="星光之夜 2025 世界巡迴演唱會"
+							>
+								星光之夜 2025 世界巡迴演唱會
+							</h5>
+							<ul class="text-sm text-gray-600 mb-4 space-y-1">
+								<li>
+									<i class="fa-solid fa-location-dot mr-1"></i
+									>台北小巨蛋
+								</li>
+								<li>
+									<i class="fa-regular fa-calendar mr-1"></i
+									>2025/12/05（五）19:30
+								</li>
+							</ul>
+							<a href="#" class="block w-full btn-primary">
+								立即購票
+							</a>
+						</div>
+					</div>
+
+					<!-- Card 2 -->
+					<div
+						class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden h-full"
+					>
+						<div
+							class="aspect-video bg-cover bg-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop');
+							"
+						></div>
+						<div class="p-4">
+							<h5
+								class="font-semibold text-lg mb-2 truncate"
+								title="夏日音樂祭 2025"
+							>
+								夏日音樂祭 2025
+							</h5>
+							<ul class="text-sm text-gray-600 mb-4 space-y-1">
+								<li>
+									<i class="fa-solid fa-location-dot mr-1"></i
+									>高雄世運主場館
+								</li>
+								<li>
+									<i class="fa-regular fa-calendar mr-1"></i
+									>2025/08/20（三）16:00
+								</li>
+							</ul>
+							<a href="#" class="block w-full btn-primary">
+								立即購票
+							</a>
+						</div>
+					</div>
+
+					<!-- Card 3 -->
+					<div
+						class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden h-full"
+					>
+						<div
+							class="aspect-video bg-cover bg-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1524230659092-07f99a75d4d5?q=80&w=1600&auto=format&fit=crop');
+							"
+						></div>
+						<div class="p-4">
+							<h5
+								class="font-semibold text-lg mb-2 truncate"
+								title="沉浸式劇場：城市之光"
+							>
+								沉浸式劇場：城市之光
+							</h5>
+							<ul class="text-sm text-gray-600 mb-4 space-y-1">
+								<li>
+									<i class="fa-solid fa-location-dot mr-1"></i
+									>臺中國家歌劇院 中劇院
+								</li>
+								<li>
+									<i class="fa-regular fa-calendar mr-1"></i
+									>2025/11/10（六）14:30
+								</li>
+							</ul>
+							<a href="#" class="block w-full btn-primary">
+								立即購票
+							</a>
+						</div>
+					</div>
+
+					<!-- Card 4 -->
+					<div
+						class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden h-full"
+					>
+						<div
+							class="aspect-video bg-cover bg-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1600&auto=format&fit=crop');
+							"
+						></div>
+						<div class="p-4">
+							<h5
+								class="font-semibold text-lg mb-2 truncate"
+								title="親子馬戲嘉年華"
+							>
+								親子馬戲嘉年華
+							</h5>
+							<ul class="text-sm text-gray-600 mb-4 space-y-1">
+								<li>
+									<i class="fa-solid fa-location-dot mr-1"></i
+									>台北流行音樂中心
+								</li>
+								<li>
+									<i class="fa-regular fa-calendar mr-1"></i
+									>2025/07/13（日）10:00
+								</li>
+							</ul>
+							<a href="#" class="block w-full btn-primary">
+								立即購票
+							</a>
+						</div>
+					</div>
+
+					<!-- Card 5 -->
+					<div
+						class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden h-full"
+					>
+						<div
+							class="aspect-video bg-cover bg-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=1600&auto=format&fit=crop');
+							"
+						></div>
+						<div class="p-4">
+							<h5
+								class="font-semibold text-lg mb-2 truncate"
+								title="動漫交響樂特別場"
+							>
+								動漫交響樂特別場
+							</h5>
+							<ul class="text-sm text-gray-600 mb-4 space-y-1">
+								<li>
+									<i class="fa-solid fa-location-dot mr-1"></i
+									>國家音樂廳
+								</li>
+								<li>
+									<i class="fa-regular fa-calendar mr-1"></i
+									>2025/09/28（日）19:30
+								</li>
+							</ul>
+							<a href="#" class="block w-full btn-primary">
+								立即購票
+							</a>
+						</div>
+					</div>
+
+					<!-- Card 6 -->
+					<div
+						class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden h-full"
+					>
+						<div
+							class="aspect-video bg-cover bg-center"
+							style="
+								background-image: url('https://images.unsplash.com/photo-1518544801976-3e159e50e5bb?q=80&w=1600&auto=format&fit=crop');
+							"
+						></div>
+						<div class="p-4">
+							<h5
+								class="font-semibold text-lg mb-2 truncate"
+								title="脫口秀之夜"
+							>
+								脫口秀之夜
+							</h5>
+							<ul class="text-sm text-gray-600 mb-4 space-y-1">
+								<li>
+									<i class="fa-solid fa-location-dot mr-1"></i
+									>Legacy Taipei
+								</li>
+								<li>
+									<i class="fa-regular fa-calendar mr-1"></i
+									>2025/06/22（六）20:00
+								</li>
+							</ul>
+							<a href="#" class="block w-full btn-primary">
+								立即購票
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Notice / Announcement -->
+		<section class="py-12 bg-gray-100" id="notice">
+			<div class="container mx-auto">
+				<div class="flex items-end justify-between mb-6">
+					<div>
+						<h3 class="text-2xl font-bold mb-1">最新公告</h3>
+						<p class="text-gray-600 text-sm">
+							購票須知、系統維護與活動公告
+						</p>
+					</div>
+					<a href="#" class="link-primary text-sm">
+						更多公告<i class="fa-solid fa-arrow-right ml-1"></i>
+					</a>
+				</div>
+
+				<div
+					class="bg-white rounded-lg border border-gray-200 divide-y divide-gray-200"
+				>
+					<a
+						href="#"
+						class="flex justify-between items-center p-4 hover:bg-gray-50 transition"
+					>
+						<span>
+							<span class="badge-primary mr-2"> 公告 </span>
+							11/15 系統維護通知（02:00–05:00 暫停服務）
+						</span>
+						<small class="text-gray-500 text-sm">2025-11-01</small>
+					</a>
+					<a
+						href="#"
+						class="flex justify-between items-center p-4 hover:bg-gray-50 transition"
+					>
+						<span>
+							<span class="badge-primary mr-2"> 注意 </span>
+							搖滾區採實名制，入場請備妥證件
+						</span>
+						<small class="text-gray-500 text-sm">2025-10-20</small>
+					</a>
+					<a
+						href="#"
+						class="flex justify-between items-center p-4 hover:bg-gray-50 transition"
+					>
+						<span>
+							<span class="badge-primary mr-2"> 活動 </span>
+							年度音樂祭搶票攻略與購票流程指引
+						</span>
+						<small class="text-gray-500 text-sm">2025-10-05</small>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="pt-12 pb-8 bg-white border-t border-gray-200">
+			<div class="hidden bg-primary"></div>
+
+			<div class="container mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+					<div class="lg:col-span-1">
+						<div class="flex items-center mb-3">
+							<i
+								class="fa-solid fa-ticket-simple mr-2 text-primary"
+							></i>
+							<span class="font-bold">Tixcraft Ticketing</span>
+						</div>
+						<p class="text-gray-600 text-sm mb-3">
+							提供演唱會、藝文與展演活動之線上購票服務，重視使用體驗與資訊安全。
+						</p>
+						<div class="flex gap-2">
+							<a
+								class="social-icon"
+								href="#"
+								aria-label="Facebook"
+							>
+								<i
+									class="fa-brands fa-facebook-f text-gray-600"
+								></i>
+							</a>
+							<a
+								class="social-icon"
+								href="#"
+								aria-label="Instagram"
+							>
+								<i
+									class="fa-brands fa-instagram text-gray-600"
+								></i>
+							</a>
+							<a
+								class="social-icon"
+								href="#"
+								aria-label="X/Twitter"
+							>
+								<i
+									class="fa-brands fa-x-twitter text-gray-600"
+								></i>
+							</a>
+							<a
+								class="social-icon"
+								href="#"
+								aria-label="YouTube"
+							>
+								<i
+									class="fa-brands fa-youtube text-gray-600"
+								></i>
+							</a>
+						</div>
+					</div>
+					<div>
+						<h6 class="text-sm font-bold mb-3 uppercase">客服</h6>
+						<ul class="space-y-2 text-sm">
+							<li>
+								<a href="#" class="link-muted">常見問題</a>
+							</li>
+							<li>
+								<a href="#" class="link-muted">聯絡我們</a>
+							</li>
+							<li>
+								<a href="#" class="link-muted">服務條款</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h6 class="text-sm font-bold mb-3 uppercase">政策</h6>
+						<ul class="space-y-2 text-sm">
+							<li>
+								<a href="#" class="link-muted">隱私權政策</a>
+							</li>
+							<li>
+								<a href="#" class="link-muted">退換票辦法</a>
+							</li>
+							<li>
+								<a href="#" class="link-muted">購票須知</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h6 class="text-sm font-bold mb-3 uppercase">
+							訂閱最新活動
+						</h6>
+						<form
+							onsubmit="event.preventDefault();"
+							class="space-y-2"
+						>
+							<input
+								type="email"
+								id="subscribeEmail"
+								class="input"
+								placeholder="輸入 Email"
+								required
+							/>
+							<button class="w-full btn-primary" type="submit">
+								訂閱
+							</button>
+						</form>
+					</div>
+				</div>
+				<hr class="my-8 border-gray-200" />
+				<div
+					class="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600"
+				>
+					<span>
+						© <span id="year"></span> Tixcraft Ticketing. All rights
+						reserved.
+					</span>
+					<div class="mt-2 sm:mt-0">
+						<a
+							href="#"
+							class="text-gray-600 hover:text-primary-hover mr-4"
+							>隱私權政策</a
+						>
+						<a href="#" class="link-muted">使用者條款</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Login modal -->
+		<div
+			id="loginModal"
+			class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+		>
+			<div
+				class="bg-white rounded-xl shadow-lg w-full max-w-md overflow-hidden"
+			>
+				<!-- Modal Header -->
+				<div
+					class="flex items-center justify-between px-5 py-3 border-b border-gray-200"
+				>
+					<h5 class="text-xl font-semibold text-gray-800">
+						會員登入
+					</h5>
+					<button
+						id="closeModal"
+						class="text-gray-400 hover:text-gray-600 transition"
+						aria-label="關閉視窗"
+					>
+						<i class="fa-solid fa-xmark text-xl"></i>
+					</button>
+				</div>
+
+				<!-- Modal Body -->
+				<div class="p-6 bg-white">
+					<form onsubmit="event.preventDefault();">
+						<div class="mb-4">
+							<label
+								for="loginEmail"
+								class="block text-sm font-medium mb-2 text-gray-700"
+							>
+								Email
+							</label>
+							<input
+								type="email"
+								class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+								id="loginEmail"
+								placeholder="name@example.com"
+								required
+							/>
+						</div>
+
+						<div class="mb-3">
+							<label
+								for="loginPassword"
+								class="block text-sm font-medium mb-2 text-gray-700"
+							>
+								密碼
+							</label>
+							<input
+								type="password"
+								class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+								id="loginPassword"
+								placeholder="請輸入密碼"
+								required
+							/>
+						</div>
+
+						<div class="flex justify-between items-center mb-4">
+							<div class="flex items-center">
+								<input
+									class="mr-2 accent-primary"
+									type="checkbox"
+									id="rememberMe"
+								/>
+								<label
+									class="text-sm text-gray-700"
+									for="rememberMe"
+									>記住我</label
+								>
+							</div>
+							<a
+								href="#"
+								class="text-sm text-primary hover:text-primary-hover"
+								>忘記密碼？</a
+							>
+						</div>
+
+						<button type="submit" class="w-full btn-primary">
+							登入
+						</button>
+					</form>
+
+					<div class="text-center mt-4 text-sm">
+						還不是會員？
+						<a
+							href="#"
+							class="text-primary hover:text-primary-hover font-medium"
+						>
+							立即註冊
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- External JavaScript -->
+		<!-- ✅ 登入視窗控制邏輯 -->
+		<script>
+			// 顯示登入視窗
+			document
+				.getElementById("loginBtn")
+				?.addEventListener("click", () => {
+					document
+						.getElementById("loginModal")
+						.classList.remove("hidden");
+					document.body.classList.add("overflow-hidden"); // ❗防止背景捲動
+				});
+
+			// 手機版登入按鈕也能開啟
+			document
+				.getElementById("loginBtnMobile")
+				?.addEventListener("click", () => {
+					document
+						.getElementById("loginModal")
+						.classList.remove("hidden");
+					document.body.classList.add("overflow-hidden");
+				});
+
+			// 關閉視窗
+			document
+				.getElementById("closeModal")
+				?.addEventListener("click", () => {
+					document
+						.getElementById("loginModal")
+						.classList.add("hidden");
+					document.body.classList.remove("overflow-hidden");
+				});
+
+			// 點擊背景黑幕關閉
+			document
+				.getElementById("loginModal")
+				?.addEventListener("click", (e) => {
+					if (e.target.id === "loginModal") {
+						e.currentTarget.classList.add("hidden");
+						document.body.classList.remove("overflow-hidden");
+					}
+				});
+		</script>
+
+		<script src="./JS/MainPage2.js"></script>
+	</body>
+</html>

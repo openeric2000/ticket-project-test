@@ -1,0 +1,161 @@
+/* MainPage.css */
+
+:root {
+	--brand-red: #e1251b;
+	--brand-red-dark: #b81d16;
+	--brand-gray-50: #fafbfc;
+	--brand-gray-100: #f5f6f8;
+	--brand-gray-200: #eef0f3;
+	--text-dark: #222;
+}
+
+/* Utilities */
+.text-brand {
+	color: var(--brand-red) !important;
+}
+.bg-brand {
+	background-color: var(--brand-red) !important;
+}
+.bg-brand-subtle {
+	background-color: color-mix(
+		in srgb,
+		var(--brand-red) 12%,
+		white
+	) !important;
+}
+.btn-brand {
+	--bs-btn-color: #fff;
+	--bs-btn-bg: var(--brand-red);
+	--bs-btn-border-color: var(--brand-red);
+	--bs-btn-hover-bg: var(--brand-red-dark);
+	--bs-btn-hover-border-color: var(--brand-red-dark);
+	--bs-btn-active-bg: var(--brand-red-dark);
+	--bs-btn-active-border-color: var(--brand-red-dark);
+}
+.btn-outline-brand {
+	--bs-btn-color: var(--brand-red);
+	--bs-btn-border-color: var(--brand-red);
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: var(--brand-red);
+	--bs-btn-hover-border-color: var(--brand-red);
+}
+
+/* Navbar */
+header .navbar-brand {
+	color: var(--text-dark);
+}
+header .navbar-brand:hover {
+	color: var(--text-dark);
+	opacity: 0.9;
+}
+header .nav-link {
+	color: #555;
+}
+header .nav-link:hover {
+	color: var(--brand-red);
+}
+
+/* Banner */
+.banner-slide {
+	min-height: clamp(280px, 40vw, 520px);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+.banner-slide::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0.9) 0%,
+		rgba(255, 255, 255, 0.6) 45%,
+		rgba(255, 255, 255, 0) 70%
+	);
+	pointer-events: none; /* 避免覆蓋層阻擋點擊/滑動 */
+}
+.banner-slide > .container {
+	position: relative;
+	z-index: 1;
+}
+.banner-1 {
+	background-image: url("https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=2000&auto=format&fit=crop");
+}
+.banner-2 {
+	background-image: url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2000&auto=format&fit=crop");
+}
+.banner-3 {
+	background-image: url("https://images.unsplash.com/photo-1518544801976-3e159e50e5bb?q=80&w=2000&auto=format&fit=crop");
+}
+
+/* Cards */
+.ticket-card {
+	border: 1px solid var(--brand-gray-200);
+}
+.ticket-card .card-body {
+	padding: 1rem;
+}
+.ticket-card .card-title {
+	font-weight: 600;
+}
+.ticket-card .bg-cover {
+	background-position: center;
+	background-size: cover;
+	border-bottom: 1px solid var(--brand-gray-200);
+}
+.ticket-card:hover {
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+	transform: translateY(-2px);
+	transition: 0.25s ease;
+}
+
+/* Section title */
+.section-title {
+	font-weight: 700;
+}
+
+/* Footer social buttons */
+footer .btn.rounded-circle {
+	width: 36px;
+	height: 36px;
+	display: inline-grid;
+	place-items: center;
+}
+
+/* Carousel z-index & hit area */
+.carousel-control-prev,
+.carousel-control-next {
+	z-index: 5;
+}
+.carousel-indicators {
+	z-index: 6;
+}
+
+/* 放大左右控制鍵的可點擊區域，提升可用性 */
+.carousel-control-prev,
+.carousel-control-next {
+	width: min(12%, 120px);
+}
+
+/* Touch gesture */
+.carousel {
+	touch-action: pan-y;
+}
+
+/* Mobile tweaks */
+@media (max-width: 575.98px) {
+	header .navbar-brand span {
+		font-size: 1rem;
+	}
+}
+.carousel.dragging {
+	cursor: grabbing;
+	user-select: none;
+}
+.carousel {
+	cursor: grab;
+}
+.carousel-inner {
+	transition: transform 0.3s ease;
+	will-change: transform;
+}
